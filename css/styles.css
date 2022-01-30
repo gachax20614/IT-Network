@@ -6,15 +6,20 @@ margin: 0;
 padding: 0;
 box-sizing: border-box;
 }
+.black {
+  height: 40px;
+  width: 100%;
+  background: #000;
+}
 /* メインヴィジュアル */
 #main-v {
   position: relative;
 }
 #main-v img {
   width: 100%;
-  object-fit: cover;
+  object-fit:cover;
   vertical-align: bottom;
-  height: 450px;
+  height: 700px;
 }
 #main-v h1 {
   position: absolute;
@@ -35,14 +40,15 @@ box-sizing: border-box;
   color:  rgba(39, 37, 37, 0.911);
   font-family: serif;
   text-decoration: none;
+  padding-left: 15px;
 }
+
 /* ハンバーガーメニュー・メニュー内容  ヘッダー*/
 .nav {
   width: 270px;
   height: 290px;
-  background: rgba(0, 0, 0, 0.8);
   position: fixed;
-  top: 2.3rem;
+  top: 2.5rem;
   right: 0;
   bottom: 0;
   padding: 1rem;
@@ -56,6 +62,7 @@ box-sizing: border-box;
   visibility: visible;
   text-align: right;
   pointer-events: auto;
+  background: rgba(0, 0, 0, 0.8);
 }
 .nav li {
   text-align: center;
@@ -75,7 +82,7 @@ box-sizing: border-box;
   position: absolute;
   width: 1.8rem;
   height: 1.5rem;
-  right: 10px;
+  right: 15px;
   cursor: pointer;
 }
 .nav_toggle span {
@@ -98,15 +105,13 @@ box-sizing: border-box;
   bottom: 0;
 }
 .nav_toggle.show span:nth-of-type(1) {
-  transform: rotate(-45deg);
-  top: 10px;
+  transform: translateY(10px) rotate(-45deg);
 }
 .nav_toggle.show span:nth-of-type(2) {
   opacity: 0;
 }
 .nav_toggle.show span:nth-of-type(3) {
-  transform: rotate(45deg);
-  bottom: 10px;
+  transform: translateY(-11px) rotate(45deg)
 }
 /* ヘッダー固定 */
 #header {
@@ -114,9 +119,11 @@ box-sizing: border-box;
   z-index: 999;
   display: flex;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.55);
   align-items: center;
+  height: 40px;
 }
+
 /* About 概要 */
 #about {
   background-image:url(../img/pc.jpg);
@@ -124,29 +131,30 @@ box-sizing: border-box;
   width: 100%;
   background-size:cover;
   position: relative;
+  
 }
 .bg-img1 {
-  background: rgba(255, 255, 255, 0.55);
+  background-color: rgba(255, 255, 255, 0.55);
   height:700px;
   width: 100%;
+  vertical-align: bottom;
 }
 #about h3 a {
   text-align: center;
   margin: 0 auto;
   display: grid;
-  place-items: center;
-  background-color: rgba(0, 0, 0, 0.8);
-  height: 5.5rem;
+  align-items:center;
+  height: 5rem;
   width: 100%;
   font-size: 3rem;
   font-family:cursive;
-  color: rgb(248, 240, 240);
+  color: rgb(58, 58, 58);
   text-decoration: none;
   position: absolute;
 }
 .about-item {
   position: absolute;
-  width: 60%;
+  width: 70%;
   display: flex;
   text-align: center;
   justify-content: center;
@@ -154,6 +162,9 @@ box-sizing: border-box;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
+}
+.about-img {
+  width: 70%;
 }
 .about-img img {
   height: 340px;
@@ -170,7 +181,7 @@ box-sizing: border-box;
 .about-txt span {
   color: rgb(199, 29, 63);
   font-size: 22px;
-  align-self:end;
+  align-self:flex-end;
 }
 .about-txt p {
   line-height: 40px;
@@ -180,17 +191,31 @@ box-sizing: border-box;
 /* Work 仕事風景 */
 #work {
   background-image:url(../img/floor.jpg);
-  height: 1000px;
+  height: 700px;
   width: 100%;
   background-size: cover;
   position: relative;
 }
  .bg-img2 {
   background: rgba(255, 255, 255, 0.55);
-  height:1000px;
+  height:700px;
+}
+#work h3 a {
+  text-align: center;
+  vertical-align: middle;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+  height: 5rem;
+  width: 100%;
+  font-size: 3rem;
+  font-family:cursive;
+  color: rgb(58, 58, 58);
+  text-decoration: none;
+  position: absolute;
 }
 .work-item {
- top: 50%;
+ top: 55%;
  left: 50%;
  transform: translate(-50%,-50%);
  position: absolute;
@@ -200,10 +225,12 @@ box-sizing: border-box;
  justify-content: center;
  align-items: center;
  flex-direction: column;
+ height: 500px;
 }
 .work-img {
   width: 100%;
   vertical-align: bottom;
+
 }
 .work-img img {
   height: 210px;
@@ -211,36 +238,25 @@ box-sizing: border-box;
   object-fit: cover;
   vertical-align: bottom;
 }
-#work h3 a {
-  text-align: center;
-  vertical-align: middle;
-  margin: 0 auto;
-  display: grid;place-items: top;
-  place-items: center;
-  background-color: rgba(0, 0, 0, 0.8);
-  height: 5.5rem;
-  width: 100%;
-  font-size: 3rem;
-  font-family:cursive;
-  color: rgb(248, 240, 240);
-  text-decoration: none;
-  position: absolute;
-}
-.work-txt {
+.work-txt.pc {
   background-color: rgba(255, 255, 255, 0.55);
-  height:255px;
   display: grid;
   place-items: center;
   width: 100%;
+  line-height: 30px;
 }
-.work-txt span {
+.work-txt.pc span {
   color: rgb(199, 29, 63);
   font-size: 22px;
   align-self: end;
+  height: 50px;
 }
-.work-txt p {
+.work-txt.pc p {
   line-height: 30px;
-  font-size: 18px;
+  font-size: 20px;
+}
+.work-txt.sp {
+  display: none;
 }
 /* コンタクトフォーム */
 #contact {
@@ -261,18 +277,18 @@ box-sizing: border-box;
   margin: 0 auto;
   display: grid;
   place-items: center;
-  background-color: rgba(0, 0, 0, 0.8);
-  height: 5.5rem;
+  background-color: rgba(0, 0, 0, 0);
+  height: 5rem;
   width: 100%;
   font-size: 3rem;
   font-family:cursive;
-  color: rgb(248, 240, 240);
+  color: rgb(58, 58, 58);
   text-decoration: none;
   position: absolute;
 }
 .contact-txt {
   position: absolute;
-  top:60%;
+  top:50%;
   left: 50%;
   transform: translate(-50%,-50%);
   width: 800px;
@@ -282,6 +298,7 @@ box-sizing: border-box;
   text-align: left;
   margin: 10px 0 0 25px;
   font-size: small;
+  background: none;
 }
 #contact input {
   border: 1px solid black;
@@ -314,12 +331,94 @@ box-sizing: border-box;
   color: white;
   line-height: 2;
 }
+/* about.html 概要 */
+.about-main {
+display: flex;
+background: white;
+text-align: center;
+max-width: 940px;
+justify-content: center;
+align-items: center;
+margin: 0 auto;
+}
+.about-mv img {
+  height: 500px;
+  width: 550px;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+.about-mtxt {
+  background: white;
+}
+.about-mtxt span{
+  color: rgb(209, 28, 64);
+  background: white;
+  width: 100%;
+  display: block;
+}
+.about-mtxt p {
+  color: black;
+}
+.about-main2 {
+  display: flex;
+  background: white;
+  text-align: center;
+  max-width: 940px;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  flex-direction: row-reverse;
+  }
+  .about-mv2 img {
+    height: 500px;
+    width: 550px;
+    object-fit: cover;
+    vertical-align: bottom;
+  }
+  .about-mtxt2 {
+    background: white;
+    width: 390px;
+    letter-spacing: 10px;
+    line-height: 2;
+  }
+  .about-mtxt2 span{
+    width: 100%;
+    display: block;
+  }
+  .about-mtxt2 p {
+    color: black;
+    font-family: serif;
+  }
+.heading {
+  position: relative;
+  padding: 80px 0 40px 0;
+  font-size: 26px;
+  text-align: center;
+}
+.heading span {
+  position: relative;
+  z-index: 0;
+  color: white;
+  font-size: 30px;
+  font-family: serif;
+}
+.heading::before {
+  content: attr(data-en);
+  position: absolute;
+  color: rgba(255, 248, 220, 0.3);
+  font-size: 80px;
+  font-weight: 400;
+  font-family: cursive;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
 /* メディアクリ *　sp向け */
    @media(max-width:767px) {
     .about-item {
      display: flex;
      flex-direction: column;
-     width: 100%;
+     width: 90%;
      margin-top: 10%;
    }
     .about-img{
@@ -337,7 +436,7 @@ box-sizing: border-box;
       display: grid;
     }
     .about-txt span {
-      color: rgb(199, 29, 63);
+      color: rgb(209, 28, 64);
       font-size: 22px;
       align-self:center;
     }
@@ -347,11 +446,11 @@ box-sizing: border-box;
       align-self:flex-start;
     }
     .work-item {
-      top: 50%;
+      top: 55%;
       left: 50%;
       transform: translate(-50%,-50%);
       position: absolute;
-      width: 100%;
+      width: 90%;
       display: flex;
       text-align: center;
       justify-content: center;
@@ -364,10 +463,35 @@ box-sizing: border-box;
       height: 50%;
     }
     .work-img img {
-      height: 210px;
+      height: 125px;
       width: 50%;
       object-fit: cover;
       vertical-align: bottom;
+    }
+    .work-txt.sp {
+      background-color: rgba(255, 255, 255, 0.55);
+      display: grid;
+      place-items: center;
+      width: 100%;
+      line-height: 30px;
+    }
+    .work-txt.sp span {
+      color: rgb(209, 28, 64);
+      font-size: 22px;
+      align-self: end;
+      height: 50px;
+    }
+
+    .work-txt.sp p {
+      line-height: 30px;
+      font-size: 18px;
+      width: 100%;
+    }
+    .work-txt.sp {
+      visibility: visible;
+    }
+    .work-txt.pc {
+      display: none;
     }
     .contact-txt{
       width: 100%;
