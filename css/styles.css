@@ -506,4 +506,18 @@ margin: 0 auto;
       width: 90%;
       line-height: 2em;
     }
+    /* About.htmlのメディアクリ */
+    .about-main {
+      flex-direction: column;
+    }
+    .about-main2{
+      flex-direction: column;
+      background: black;
+    }
+    .about-mtxt2 {
+      background: black;
+    }
+    .about-mtxt2 p {
+      color: white;
+    }
    }
