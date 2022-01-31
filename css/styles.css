@@ -347,17 +347,10 @@ margin: 0 auto;
   object-fit: cover;
   vertical-align: bottom;
 }
-.about-mtxt {
-  background: white;
-}
 .about-mtxt span{
   color: rgb(209, 28, 64);
-  background: white;
   width: 100%;
   display: block;
-}
-.about-mtxt p {
-  color: black;
 }
 .about-main2 {
   display: flex;
@@ -376,7 +369,6 @@ margin: 0 auto;
     vertical-align: bottom;
   }
   .about-mtxt2 {
-    background: white;
     width: 390px;
     letter-spacing: 10px;
     line-height: 2;
@@ -412,6 +404,60 @@ margin: 0 auto;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
+}
+/* Work.html */
+.work-container1 {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  background-color: white;
+  width: 850px;
+  margin-left: 8%;
+  line-height: 2;
+}
+.work-container1-img img {
+  height: 400px;
+  width: 550px;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+.work-container1-txt {
+  width: 300px;
+}
+.work-container1-txt span {
+  color: rgb(209, 28, 64);
+  width: 100%;
+  display: block;
+}
+.work-container2 {
+  display: flex;
+  flex-direction: row-reverse;
+  text-align: center;
+  align-items: center;
+  width: 850px;
+  margin-left: 41.6%;
+  margin-top: 20px;
+  background-color: white;
+  line-height: 2;
+}
+.work-container2-img {
+  display: flex;
+  flex-direction: column;
+}
+.work-container2-img img {
+  height: 200px;
+  width: 550px;
+  object-fit:cover;
+  vertical-align: bottom;
+  background-size: cover;
+}
+.work-container2-txt {
+  width: 300px;
+}
+.work-container2-txt span {
+  color: rgb(209, 28, 64);
+  width: 100%;
+  display: block;
 }
 /* メディアクリ *　sp向け */
    @media(max-width:767px) {
@@ -510,6 +556,12 @@ margin: 0 auto;
     .about-main {
       flex-direction: column;
     }
+    .about-mv img {
+      width: 100%;
+    }
+    .about-mv2 img {
+      width: 100%;
+    }
     .about-main2{
       flex-direction: column;
       background: black;
@@ -520,4 +572,33 @@ margin: 0 auto;
     .about-mtxt2 p {
       color: white;
     }
+      /* work.htmlのメディアクリ */
+      .work-container1 {
+        flex-direction: column;
+        width: 100%;
+        background-color: #000;
+        margin: 0 auto;
+      }
+      .work-container1-img img {
+        width: 100%;
+      }
+      .work-container1-txt p {
+        color: white;
+      }
+      .work-container2 {
+        flex-direction: column;
+        width: 100%;
+        background-color: #000;
+        margin: 50px auto;
+      }
+      .work-container2-img {
+        display: inline;
+      }
+      .work-container2-img img {
+        width: 100%;
+      }
+      .work-container2-txt p {
+        color: white;
+      }
+
    }
