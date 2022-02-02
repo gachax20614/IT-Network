@@ -1,6 +1,6 @@
 'use strict';
 // ハンバーガーメニューのクラス付加・削除
-// コンテンツの選択時や違う場所を選択した際にメニューを非表示にする
+// コンテンツ以外を選択した際にメニューを非表示にする
   const nav = document.querySelector(".nav");
   document.addEventListener("click",(e) => {
     if(e.target.closest(".nav_toggle")) {
@@ -9,6 +9,7 @@
       nav.classList.remove("show");
     }
   });
+
   const nav_toggle = document.querySelector(".nav_toggle");
   document.addEventListener("click",(e) => {
     if(e.target.closest(".nav_toggle")) {
@@ -17,7 +18,12 @@
       nav_toggle.classList.remove("show");
     }
   });
+  // メニュー表示のコンテンツを選択した場合、メニューを非表示にする
+  $('a').on('click',function(){
+    $('.nav_toggle').trigger('click');
+  });
 
+// ヘッダーのスクロールスピード・位置調整
   jQuery(function(){
     var windowWidth = $(window).width();
     var headerHight = 40; 
