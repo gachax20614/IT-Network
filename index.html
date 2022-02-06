@@ -15,23 +15,23 @@
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
-  <header id="header">
-    <h2><a href="index.html" class="btn">IT-Network</a></h2>
-    <!-- ハンバーガーメニュー -->
-    <div class="nav_toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <nav class="nav">
-      <ul>
-        <li><a href="index.html">Top</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header id="header">
+      <h2><a href="index.html" class="btn">IT-Network</a></h2>
+      <!-- ハンバーガーメニュー -->
+      <div class="nav_toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">Top</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
     <main id="main-v">
       <img src="img/build.jpg" alt="会社外観の写真">
       <h1>Hello-<br>Newworld</h1>
@@ -44,60 +44,64 @@
         <div class="about-img">
           <img src="img/pc.jpg" alt="デスクに置かれたパソコンの写真">
         </div>
-         <div class="about-txt">
+        <div class="about-txt">
           <span>私たちは新しい未来を創造します!</span>
           <p>新しいことを模索し、社会や生活が豊かになるように日々挑戦し続けます。<br>
             新しいことを模索し、社会や生活が豊かになるように日々挑戦し続けます。<br>
             新しいことを模索し、社会や生活が豊かになるように日々挑戦し続けます。</p>
           </div>
         </div>
-        </section>
-        <div class="black"></div>
-    <section id="work">
-            <h3><a href="work.html">Work</a></h3>
-            <div class="bg-img2"></div>
-            <div class="work-item">
-              <div class="work-img">
-                <img src="img/floor.jpg" alt="会社内の就業写真"><img src="img/hearing.jpg" alt="お客様との打ち合わせの写真"><img src="img/team.jpg" alt="仲間とのコミニケーションの様子"><img src="img/design.jpg" alt="プロジェクトを進めているパソコンの画面写真">
-              </div>
-              <div class="work-txt pc">
-                <span>未来の創造に取り組みます!</span>
-                <p>未来創造にコミットします。
-                   未来創造にコミットします。<br>
-                   未来創造にコミットします。
-                   未来創造にコミットします。<br>
-                   未来創造にコミットします。
-                   未来創造にコミットします。<br></p>
-              </div>
-              <div class="work-txt sp">
-                <span>未来の創造に取り組みます!</span>
-                <p>未来創造にコミットします。<br>
-                   未来創造にコミットします。<br>
-                   未来創造にコミットします。<br>
-                   未来創造にコミットします。<br>
-                   未来創造にコミットします。<br>
-                   未来創造にコミットします。<br></p>
+      </section>
+      <div class="black"></div>
+      <section id="work">
+        <h3><a href="work.html">Work</a></h3>
+        <div class="bg-img2"></div>
+        <div class="work-item">
+          <div class="work-img">
+            <img src="img/floor.jpg" alt="会社内の就業写真"><img src="img/hearing.jpg" alt="お客様との打ち合わせの写真"><img src="img/team.jpg" alt="仲間とのコミニケーションの様子"><img src="img/design.jpg" alt="プロジェクトを進めているパソコンの画面写真">
+          </div>
+          <div class="work-txt pc">
+            <span>未来の創造に取り組みます!</span>
+            <p>未来創造にコミットします。
+              未来創造にコミットします。<br>
+              未来創造にコミットします。
+              未来創造にコミットします。<br>
+              未来創造にコミットします。
+              未来創造にコミットします。<br></p>
+            </div>
+            <div class="work-txt sp">
+              <span>未来の創造に取り組みます!</span>
+              <p>未来創造にコミットします。<br>
+                未来創造にコミットします。<br>
+                未来創造にコミットします。<br>
+                未来創造にコミットします。<br>
+                未来創造にコミットします。<br>
+                未来創造にコミットします。<br></p>
               </div>
             </div>
-    </section>
-    <div class="black"></div>
-    <section id="contact">
-          <h3><a href="#main-v">Contact</a></h3>
-          <div class="bg-img3"></div>
-            <form action="GET">
-              <div class="contact-txt">
-                <p>NAME</p>
-                <input type="text" name="name" id="">
-                <p>E-MAIL</p>
-                <input type="text" name="e-mail" id="">
-                <p>MESSAGE</p>
-                <textarea name="message" id="" cols="30" rows="10"></textarea>
-                <div class="btn">
-                  <a href="#main-v"><input type="submit" value="送信" 
-                    style="width: 230px; height: 50px;"></a>
-                  </div>
-                </div>
-              </form>
+          </section>
+          <div class="black"></div>
+          <section id="contact">
+            <h3><a href=" contact.html">Contact</a></h3>
+            <div class="bg-img3"></div>
+            <form method="post" action="./check.php">
+            <div class="contact-txt">
+              <p>NAME</p>
+              <input type="text" name="name" id="name" value="" placeholder="お名前を入力してください">
+              <p>E-MAIL</p>
+              <input type="text" name="e-mail" id="e-mail" value="" placeholder="メールアドレスを入力してください">
+              <p>MESSAGE</p>
+              <textarea name="message" id="message" cols="30" rows="10" placeholder="お問い合わせ内容を入力してください"></textarea>
+              <table>
+                <tr>
+                  <td colspan="2">
+                    <input type="reset" value="リセット">
+                    <input type="submit" value="確認画面へ">
+                  </td>
+                </tr>
+              </table>
+              </div>
+            </form>
     </section>
       <footer>
         <div class="footer-txt">
