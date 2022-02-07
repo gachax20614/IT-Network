@@ -19,7 +19,7 @@ session_start();
   </head>
   <body>
     <header id="header">
-      <h2><a href="index.html" class="btn">IT-Network</a></h2>
+      <h2><a href="index.php" class="btn">IT-Network</a></h2>
       <!-- ハンバーガーメニュー -->
       <div class="nav_toggle">
         <span></span>
@@ -28,7 +28,7 @@ session_start();
       </div>
       <nav class="nav">
         <ul>
-          <li><a href="index.html">Top</a></li>
+          <li><a href="index.php">Top</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#work">Work</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -41,7 +41,7 @@ session_start();
     </main>
     <div class="black"></div>
     <section id="about">
-      <h3><a href="about.html">About</a></h3>
+      <h3><a href="./pagefile/about.html">About</a></h3>
       <div class="bg-img1"></div>
       <div class="about-item">
         <div class="about-img">
@@ -57,7 +57,7 @@ session_start();
       </section>
       <div class="black"></div>
       <section id="work">
-        <h3><a href="work.html">Work</a></h3>
+        <h3><a href="./pagefile/work.html">Work</a></h3>
         <div class="bg-img2"></div>
         <div class="work-item">
           <div class="work-img">
@@ -85,36 +85,10 @@ session_start();
           </section>
           <div class="black"></div>
           <section id="contact">
-            <h3><a href=" contact.html">Contact</a></h3>
+            <h3><a href="./pagefile/contact.html">Contact</a></h3>
             <div class="bg-img3"></div>
-            <form method="post" action="./check.php">
-  <?php
-    //CSRF対策のワンタイムトークン発行
-    $randomNumber = openssl_random_pseudo_bytes(16);
-    $token = bin2hex($randomNumber);
-    echo '<input name="input_token" type="hidden" value="'.$token.'">';
-    //トークンをセッションに格納
-    // *宣言の前に<?PHP session_start();を記述する
-    $_SESSION['input_token'] = $token;
-    ?>
-              <div class="contact-txt">
-                <p>NAME</p>
-                <input type="text" name="name" id="name" value="" placeholder="お名前を入力してください">
-                <p>E-MAIL</p>
-                <input type="text" name="e-mail" id="e-mail" value="" placeholder="メールアドレスを入力してください">
-                <p>MESSAGE</p>
-                <textarea name="message" id="message" cols="30" rows="10" value="" placeholder="お問い合わせ内容を入力してください"></textarea>
-                <table class="check_btn">
-                <tr>
-                  <td colspan="2">
-                    <input type="reset" value="リセット">
-                    <input type="submit" value="確認画面へ">
-                  </td>
-                </tr>
-              </table>
-                </div>
-              </form>
-    </section>
+          <?php include('./contact_form/form.php'); ?>
+          </section>
       <footer>
         <div class="footer-txt">
           <p>2th Floor xxxx Building x-x-x Nishiazabu, Minato-ku, Tokyo 106-0031 Japan<br>

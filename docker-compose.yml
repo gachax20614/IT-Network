@@ -1,4 +1,4 @@
-version: '3'
+version: '2'
 services:
  web:
    build: .
@@ -11,9 +11,10 @@ services:
 
  mail:
    platform: linux/x86_64
-   image: djfarrelly/maildev
+   image: kanemu/maildev-with-iconv
    ports:
       - "1080:80"
+      - "3025:25" #テスト用SMTPポート
    depends_on:
     - db
 
