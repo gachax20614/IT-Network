@@ -41,7 +41,7 @@ session_start();
     </main>
     <div class="black"></div>
     <section id="about">
-      <h3><a href="./pagefile/about.html">About</a></h3>
+      <h3><a href="./pagefile/about.php">About</a></h3>
       <div class="bg-img1"></div>
       <div class="about-item">
         <div class="about-img">
@@ -57,7 +57,7 @@ session_start();
       </section>
       <div class="black"></div>
       <section id="work">
-        <h3><a href="./pagefile/work.html">Work</a></h3>
+        <h3><a href="./pagefile/work.php">Work</a></h3>
         <div class="bg-img2"></div>
         <div class="work-item">
           <div class="work-img">
@@ -85,7 +85,7 @@ session_start();
           </section>
           <div class="black"></div>
           <section id="contact">
-            <h3><a href="./pagefile/contact.html">Contact</a></h3>
+            <h3><a href="./pagefile/contact.php">Contact</a></h3>
             <div class="bg-img3"></div>
           <?php include('./contact_form/form.php'); ?>
           </section>

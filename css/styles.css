@@ -342,8 +342,6 @@ box-sizing: border-box;
   line-height: 2;
   margin-top: 20px;
 }
-
-
 /* フッターテキスト */
 .footer-txt {
   width: 100%;
@@ -351,9 +349,8 @@ box-sizing: border-box;
   background-color: #000;
   color: white;
   line-height: 2;
-
 }
-/* about.html */
+/* about.php */
 .about-main {
 display: flex;
 background: white;
@@ -427,14 +424,13 @@ margin: 0 auto;
   left: 50%;
   transform: translate(-50%,-50%);
 }
-/* Work.html */
+/* Work.php*/
 .work-container1 {
   display: flex;
   text-align: center;
   align-items: center;
   background-color: white;
   width: 850px;
-  margin-left: 8%;
   line-height: 2;
 }
 .work-container1-img img {
@@ -457,10 +453,10 @@ margin: 0 auto;
   text-align: center;
   align-items: center;
   width: 850px;
-  margin-left: 41.6%;
   margin-top: 20px;
   background-color: white;
   line-height: 2;
+  margin-right: auto;
 }
 .work-container2-img {
   display: flex;
@@ -481,6 +477,72 @@ margin: 0 auto;
   width: 100%;
   display: block;
 }
+/* contact.php */
+.map {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.map iframe {
+  max-width: 100%;
+  width: 800px;
+  height: 450px;
+  display: block;
+  margin: 0 auto;
+}
+.address_txt {
+  background-color: white;
+  height: 200px;
+  text-align: center;
+  line-height: 2;
+  font-size: 18px;
+  padding-top: 30px;
+  width:800px;
+  justify-content: center;
+  margin: 0 auto;
+}
+.contactform-txt {
+  max-width: 800px;
+  text-align: center;
+  background-color: white;
+  margin: 0 auto;
+}
+.contactform-txt P {
+  color: black;
+  text-align: left;
+  padding: 10px 0 0 25px;
+  font-size: large;
+  background: none;
+}
+.contactform-txt input {
+  border: 1px solid black;
+  width: 90%;
+  line-height: 2em;
+  height: 40px;
+}
+.contactform-txt textarea {
+  border: 1px solid black;
+  width: 90%;
+}
+.contact_check_btn {
+  width: 250px;
+  margin: 20px auto;
+}
+.contact_check_btn td {
+  display: flex;
+}
+.contact_check_btn input {
+  background-color: black;
+  color: white;
+  width: 230px;
+  height: 50px;
+}
+.contact_check_btn input:hover {
+  background-color: white;
+  color: #000;
+  border: 1px solid black;
+}
+
 /* メディアクリ *　sp向け */
    @media(max-width:767px) {
     .about-item {
@@ -574,7 +636,7 @@ margin: 0 auto;
       width: 90%;
       line-height: 2em;
     }
-    /* About.htmlのメディアクリ */
+    /* About.phpのメディアクリ */
     .about-main {
       flex-direction: column;
     }
@@ -594,7 +656,7 @@ margin: 0 auto;
     .about-mtxt2 p {
       color: white;
     }
-      /* work.htmlのメディアクリ */
+      /* work.phpのメディアクリ */
       .work-container1 {
         flex-direction: column;
         width: 100%;
@@ -622,5 +684,26 @@ margin: 0 auto;
       .work-container2-txt p {
         color: white;
       }
-
+      /* contact.phpのメディアクリ */
+      .map iframe {
+        max-width: 100%;
+        width: 100%;
+        height: 450px;
+        display: block;
+        margin: 0 auto;
+      }
+      .address_txt {
+        background-color: white;
+        height: 200px;
+        text-align: center;
+        line-height: 2;
+        font-size: 18px;
+        padding-top: 30px;
+        width: 100%;
+        justify-content: center;
+        margin: 0 auto;
+      }
+      .contact_check_btn input {
+        width: 100%;
    }
+  }

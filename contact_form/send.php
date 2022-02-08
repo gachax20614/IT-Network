@@ -4,7 +4,21 @@ if(!$_SESSION) {
   header('Location: ./index.php');
 }
 ?>
-<link rel="stylesheet" href="../css/styles.css">
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="お問い合わせ完了画面">
+    <title>ITN | お問い合わせ完了画面</title>
+    <link rel="shortcut icon" href="../img/favicon.svg">
+    <!--CSS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+  </head>
 <?php
 
 // 任意入力項目の配列が空の場合のエラーメッセージ制御
@@ -14,13 +28,13 @@ error_reporting(E_ALL ^ E_NOTICE);
 $sender = "メール差出人";
 
 // メール送信元
-$mailFrom = "info1@example.com";
+$mailFrom = "it-network@example.com";
 
 // メール送信先
-$replyTo = "info2@example.com";
+$replyTo = "info@example.com";
 
 // 管理者メールアドレス
-$adminEmail = "info3@example.com";
+$adminEmail = "it-network@example.com";
 
 // メールヘッダ設定
 $addHeader ="From:".mb_encode_mimeheader($sender)."<".$mailFrom.">\n";
