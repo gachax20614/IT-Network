@@ -152,6 +152,9 @@ box-sizing: border-box;
   text-decoration: none;
   position: absolute;
 }
+#about h3 a:hover {
+  color: crimson;
+}
 .about-item {
   position: absolute;
   width: 70%;
@@ -213,6 +216,9 @@ box-sizing: border-box;
   color: rgb(58, 58, 58);
   text-decoration: none;
   position: absolute;
+}
+#work h3 a:hover {
+  color: crimson;
 }
 .work-item {
  top: 55%;
@@ -285,6 +291,9 @@ box-sizing: border-box;
   color: rgb(58, 58, 58);
   text-decoration: none;
   position: absolute;
+}
+#contact h3 a:hover {
+  color: crimson;
 }
 .contact-txt {
   position: absolute;
@@ -432,6 +441,7 @@ margin: 0 auto;
   background-color: white;
   width: 850px;
   line-height: 2;
+  margin-left: 5%;
 }
 .work-container1-img img {
   height: 400px;
@@ -456,7 +466,8 @@ margin: 0 auto;
   margin-top: 20px;
   background-color: white;
   line-height: 2;
-  margin-right: auto;
+  justify-content: space-between;
+  margin-left:45%
 }
 .work-container2-img {
   display: flex;
@@ -526,7 +537,7 @@ margin: 0 auto;
 }
 .contact_check_btn {
   width: 250px;
-  margin: 20px auto;
+  margin: 20px auto 0;
 }
 .contact_check_btn td {
   display: flex;
